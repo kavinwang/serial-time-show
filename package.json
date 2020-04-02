@@ -1,0 +1,29 @@
+{
+  "name": "serial-time-show",
+  "version": "1.0.0",
+  "description": "基于FZH114芯片实现的电子钟表",
+  "main": "index.js",
+  "directories": {
+    "doc": "docs"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kavinwang/serial-time-show.git"
+  },
+  "keywords": [
+    "clock"
+  ],
+  "author": "kavin wang",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/kavinwang/serial-time-show/issues"
+  },
+  "homepage": "https://github.com/kavinwang/serial-time-show#readme",
+  "dependencies": {
+    "got": "^10.7.0",
+    "serialport": "^8.0.7"
+  }
+}
