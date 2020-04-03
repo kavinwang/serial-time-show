@@ -6,3 +6,5 @@ node_modules
 npm-debug.log
 # VS Code
 .vscode
+
+nohup.out
