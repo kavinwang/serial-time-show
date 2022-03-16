@@ -1,6 +1,7 @@
-const moment = require('moment');
-const SerialPort = require('serialport')
-const port = new SerialPort('/dev/ttyS3', {
+const dayjs = require('dayjs');
+const { SerialPort } = require('serialport')
+const port = new SerialPort({
+    path: '/dev/ttyS3',
     baudRate: 19200,
     dataBits: 8,
     parity: 'odd',
@@ -15,11 +16,11 @@ const showLedMi = Buffer.from([0x18, 0x12]);
 const showLedLo = Buffer.from([0x18, 0x48]);
 let dot = 0x00;
 setInterval(() => {
-    let now = moment().format("HHmm");
+    let now = dayjs().format("HHmm");
     dot ^= 0x03;
     port.write(Buffer.from([0x08, nums[now[0]], nums[now[1]], nums[now[2]], nums[now[3]], dot]));
     setTimeout(() => {
-        let hour = moment().hour();
+        let hour = dayjs().hour();
         port.write(hour > 18 ? showLedMi : hour < 8 ? showLedLo : showLedHi);
     }, 10)
 }, 1000);
