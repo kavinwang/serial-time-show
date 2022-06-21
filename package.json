@@ -23,7 +23,7 @@
   },
   "homepage": "https://github.com/kavinwang/serial-time-show#readme",
   "dependencies": {
-    "got": "^12.0.1",
+    "got": "^12.1.0",
     "dayjs": "^1.11.0",
     "serialport": "^10.4.0"
   }
